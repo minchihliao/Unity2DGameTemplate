@@ -14,7 +14,7 @@ public class GameInstaller : MonoInstaller
 
         // 綁定 UIManager
         Container.Bind<UIManager>().FromComponentInHierarchy().AsSingle();
-
+        Container.Bind<AssetManager>().FromComponentInHierarchy().AsSingle();
 
         // 綁定 MainFlowEntry
         

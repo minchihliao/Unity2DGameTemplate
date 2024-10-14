@@ -1,18 +1,18 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
+using Zenject;
 public class MainFlowMenuState : BaseState<MainFlowController, MainFlowState>
 {
-    public override  UniTask Enter()
+    [Inject]
+    UIManager uiManager;
+    async public override UniTask Enter()
     {
         Debug.Log("Entering main menu...");
-        return default;
-        // 在這裡顯示主菜單UI
+        await uiManager.OpenUI<UIMenu>();
     }
 
     public override void Update()
     {
-        // 檢查是否應該開始遊戲
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Space key pressed, transitioning to Game state");
