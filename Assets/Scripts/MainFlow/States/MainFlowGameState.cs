@@ -21,8 +21,8 @@ public class MainFlowGameState : BaseState<MainFlowController, MainFlowState>
     }
 
 
-    public override void Update()
+    public override void Update(float deltaTime)
     {
-        gameFlowController.Update();
+        gameFlowController.Update(deltaTime);
     }
 }

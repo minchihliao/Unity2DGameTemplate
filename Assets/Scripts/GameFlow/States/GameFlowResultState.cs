@@ -16,7 +16,7 @@ public class GameFlowResultState : BaseState<GameFlowController, GameFlowState>
         return default;
     }
 
-    public override void Update()
+    public override void Update(float deltaTime)
     {
         // 在這裡添加結果狀態的更新邏輯
     }

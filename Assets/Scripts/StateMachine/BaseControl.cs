@@ -43,11 +43,11 @@ public abstract class BaseControl<TController, TState> : IInitializable, IDispos
         // 其他处理逻辑...
     }
 
-    public virtual void Update()
+    public virtual void Update(float deltaTime)
     {
         if (!Cts.IsCancellationRequested)
         {
-            CurrentState.Value?.Update();
+            CurrentState.Value?.Update(deltaTime);
         }
     }
 

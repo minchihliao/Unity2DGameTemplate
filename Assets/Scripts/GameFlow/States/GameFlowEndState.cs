@@ -21,7 +21,7 @@ public class GameFlowEndState : BaseState<GameFlowController, GameFlowState>
         return default;
     }
 
-    public override void Update()
+    public override void Update(float deltaTime)
     {
         // 在這裡添加遊戲結束狀態的更新邏輯
         // 例如：检查是否需要返回主菜单或重新开始游戏

@@ -14,9 +14,9 @@ public class GameFlowController : BaseControl<GameFlowController, GameFlowState>
         RegisterState(GameFlowState.Result, new GameFlowResultState()); // 新增 Result state
     }
 
-    public override void Update()
+    public override void Update(float deltaTime)
     {
-        base.Update();
+        base.Update(deltaTime);
         // 在這裡可以添加特定於GameFlowController的更新邏輯
     }
 }

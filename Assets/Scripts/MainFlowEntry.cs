@@ -22,7 +22,8 @@ public class MainFlowEntry : MonoBehaviour
 
     private void Update()
     {
-        mainFlowController.Update();
+        float deltaTime = Time.deltaTime;
+        mainFlowController.Update(deltaTime);
     }
 
 }

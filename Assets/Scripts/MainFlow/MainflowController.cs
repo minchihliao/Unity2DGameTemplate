@@ -18,9 +18,9 @@ public class MainFlowController : BaseControl<MainFlowController, MainFlowState>
         Debug.Log("MainFlowController initialized");
     }
 
-    public override void Update()
+    public override void Update(float deltaTime)
     {
-        base.Update();
+        base.Update(deltaTime);
         // 在這裡可以添加特定於MainFlowController的更新邏輯
     }
 

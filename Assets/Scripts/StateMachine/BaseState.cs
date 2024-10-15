@@ -5,7 +5,7 @@ public interface IState<T, U>
 {
     UniTask Enter();
     UniTask Exit();
-    void Update();
+    void Update(float deltaTime);
     void SetController(T controller);
 }
 
@@ -16,7 +16,7 @@ public abstract class BaseState<T, U> : IState<T, U>
     public abstract UniTask Enter();
     public abstract UniTask Exit();
 
-    public virtual void Update() { }
+    public virtual void Update(float deltaTime) { }
 
     public void SetController(T controller)
     {

@@ -20,7 +20,7 @@ public class MainFlowEndState : BaseState<MainFlowController, MainFlowState>
         // 例如：清理游戏结束界面
     }
 
-    public override void Update()
+    public override void Update(float deltaTime)
     {
         // 在这里添加 End 状态的更新逻辑
 
